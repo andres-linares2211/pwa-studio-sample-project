@@ -1,27 +1,30 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import { Link } from 'react-router-dom';
+
 import Button from '@magento/venia-ui/lib/components/Button';
-import Input from '../../atoms/Input';
+import Field from '@magento/venia-ui/lib/components/Field';
+import LinkButton from '@magento/venia-ui/lib/components/LinkButton';
+
 import classes from './LoginForm.css';
 
 const LoginForm = () => {
   return (
     <form className={classes.root}>
-      <h1>
-        <FormattedMessage id={'Log in'} />
-      </h1>
+      <Field label="Email">
+        <input />
+      </Field>
 
-      <Input />
-      <Input />
+      <Field label="Password">
+        <input />
+      </Field>
 
-      <Button>
+      <Button priority="high">
         <FormattedMessage id={'Log in'} />
       </Button>
 
-      <Link to="/forgot-password">
+      <LinkButton type="button">
         <FormattedMessage id="Did you forget your password?" />
-      </Link>
+      </LinkButton>
     </form>
   );
 };
