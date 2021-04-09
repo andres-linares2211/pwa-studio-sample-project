@@ -57,6 +57,7 @@
     "@magento/venia-ui": "~7.0.0",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.1",
     "@storybook/react": "~6.1.14",
+    "@testing-library/react": "^11.2.6",
     "@wojtekmaj/enzyme-adapter-react-17": "~0.4.1",
     "apollo-cache-persist": "~0.1.1",
     "babel-core": "~7.0.0-bridge.0",
