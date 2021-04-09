@@ -88,6 +88,7 @@
     "husky": "^6.0.0",
     "informed": "~3.27.0",
     "jarallax": "~1.11.1",
+    "lint-staged": ">=10",
     "load-google-maps-api": "~2.0.1",
     "lodash": "~4.17.20",
     "lodash.escape": "~4.0.1",
@@ -137,5 +138,9 @@
     "targets": {
       "intercept": "./local-intercept.js"
     }
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }
