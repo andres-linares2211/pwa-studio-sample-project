@@ -8,7 +8,6 @@ const Login = () => {
     <div>
       <BackButton />
       <LoginForm />
-      Hola!
     </div>
   );
 };
