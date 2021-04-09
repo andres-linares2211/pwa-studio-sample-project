@@ -44,12 +44,15 @@
     "@babel/plugin-transform-runtime": "~7.4.4",
     "@babel/preset-env": "~7.3.4",
     "@babel/runtime": "~7.4.2",
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
     "@magento/babel-preset-peregrine": "~1.1.0",
     "@magento/eslint-config": "~1.5.0",
     "@magento/pagebuilder": "~5.0.0",
     "@magento/peregrine": "~10.0.0",
     "@magento/upward-security-headers": "~1.0.3",
     "@magento/venia-adobe-data-layer": "~1.0.0",
+    "@magento/venia-sample-backends": "~0.0.1",
     "@magento/venia-ui": "~7.0.0",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.1",
     "@storybook/react": "~6.1.14",
@@ -119,8 +122,7 @@
     "workbox-precaching": "~6.0.2",
     "workbox-routing": "~6.0.2",
     "workbox-strategies": "~6.0.2",
-    "workbox-webpack-plugin": "~6.0.2",
-    "@magento/venia-sample-backends": "~0.0.1"
+    "workbox-webpack-plugin": "~6.0.2"
   },
   "optionalDependencies": {
     "sharp": "~0.23.3"
