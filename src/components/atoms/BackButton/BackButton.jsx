@@ -7,7 +7,6 @@ import IconBack from '../../icons/IconBack';
 
 const BackButton = () => {
   const history = useHistory();
-
   const goBack = () => history.goBack();
 
   return (
