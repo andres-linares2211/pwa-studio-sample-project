@@ -19,11 +19,11 @@ const LoginForm = () => {
       </Field>
 
       <Button priority="high">
-        <FormattedMessage id={'Log in'} />
+        <FormattedMessage id="global.logIn" />
       </Button>
 
       <LinkButton type="button">
-        <FormattedMessage id="Did you forget your password?" />
+        <FormattedMessage id="global.passwordForget" />
       </LinkButton>
     </form>
   );

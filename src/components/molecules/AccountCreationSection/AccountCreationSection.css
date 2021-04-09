@@ -1,0 +1,16 @@
+.root {
+  max-width: 27rem;
+}
+
+.root h5 {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.root p {
+  margin: 1.25rem 0;
+  letter-spacing: -0.5px;
+  line-height: 1.25rem;
+}

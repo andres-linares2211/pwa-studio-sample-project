@@ -144,5 +144,9 @@
   "lint-staged": {
     "*.{js,jsx}": "eslint --cache --fix",
     "*.{js,jsx,css,md}": "prettier --write"
-  }
+  },
+  "files": [
+    "{i18n}/*",
+    "{i18n}/**/*"
+  ]
 }
