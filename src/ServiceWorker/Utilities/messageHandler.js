@@ -30,11 +30,11 @@ export const __handlers__ = handlers;
  * the handler from the handlers object.
  */
 export const registerMessageHandler = (type, handler) => {
-    if (!handlers[type]) {
-        handlers[type] = [];
-    }
-    handlers[type].push(handler);
-    return () => unRegisterMessageHandler(type, handler);
+  if (!handlers[type]) {
+    handlers[type] = [];
+  }
+  handlers[type].push(handler);
+  return () => unRegisterMessageHandler(type, handler);
 };
 
 /**
@@ -50,11 +50,9 @@ export const registerMessageHandler = (type, handler) => {
  * @returns {void}
  */
 export const unRegisterMessageHandler = (type, handler) => {
-    if (handlers[type]) {
-        handlers[type] = handlers[type].filter(
-            handlerfn => handler !== handlerfn
-        );
-    }
+  if (handlers[type]) {
+    handlers[type] = handlers[type].filter(handlerfn => handler !== handlerfn);
+  }
 };
 
 /**
@@ -70,12 +68,12 @@ export const unRegisterMessageHandler = (type, handler) => {
  * @returns {void}
  */
 export const handleMessageFromClient = (type, payload, event) => {
-    const handlerList = handlers[type];
-    if (handlerList) {
-        handlerList.forEach(handler => {
-            handler(payload, event);
-        });
-    }
+  const handlerList = handlers[type];
+  if (handlerList) {
+    handlerList.forEach(handler => {
+      handler(payload, event);
+    });
+  }
 };
 
 /**
@@ -94,36 +92,34 @@ export const handleMessageFromClient = (type, payload, event) => {
  * @returns {Promise} promise that will resolve to the reply from the client
  */
 export const sendMessageToClient = (client, type, payload) =>
-    new Promise((resolve, reject) => {
-        const channel = new MessageChannel();
+  new Promise((resolve, reject) => {
+    const channel = new MessageChannel();
 
-        /**
-         * channel.port1 is the port for the channel creator to use
-         * to send a message to the receiver.
-         *
-         * channel.port2 is the port for the message receiver to use
-         * to communicate to the channel creator.
-         */
+    /**
+     * channel.port1 is the port for the channel creator to use
+     * to send a message to the receiver.
+     *
+     * channel.port2 is the port for the message receiver to use
+     * to communicate to the channel creator.
+     */
 
-        // Listening for a reply from the client
-        channel.port1.onmessage = event => {
-            if (event.data.error) {
-                reject(event.data.error);
-            } else {
-                resolve(event.data);
-            }
-            channel.port1.close();
-        };
+    // Listening for a reply from the client
+    channel.port1.onmessage = event => {
+      if (event.data.error) {
+        reject(event.data.error);
+      } else {
+        resolve(event.data);
+      }
+      channel.port1.close();
+    };
 
-        if (client && client.postMessage) {
-            client.postMessage({ type, payload }, [channel.port2]);
-        } else {
-            reject(
-                `Unable to send message to ${client ? client.type : 'client'}`
-            );
-            channel.port1.close();
-        }
-    });
+    if (client && client.postMessage) {
+      client.postMessage({ type, payload }, [channel.port2]);
+    } else {
+      reject(`Unable to send message to ${client ? client.type : 'client'}`);
+      channel.port1.close();
+    }
+  });
 
 /**
  *
@@ -141,9 +137,7 @@ export const sendMessageToClient = (client, type, payload) =>
  */
 
 export const sendMessageToWindow = (type, payload) =>
-    clients.matchAll().then(clients => {
-        const [windowClient] = clients.filter(
-            client => client.type === 'window'
-        );
-        return sendMessageToClient(windowClient, type, payload);
-    });
+  clients.matchAll().then(clients => {
+    const [windowClient] = clients.filter(client => client.type === 'window');
+    return sendMessageToClient(windowClient, type, payload);
+  });

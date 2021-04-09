@@ -9,15 +9,15 @@
  * @returns {boolean}
  */
 export const isFastNetwork = () => {
-    if (navigator.connection && 'effectiveType' in navigator.connection) {
-        return navigator.connection.effectiveType === '4g';
-    } else {
-        /**
-         * No way to tell if network is fast or slow.
-         * Default to fast to allow caching.
-         *
-         * Firefox does not support effectiveType API.
-         */
-        return true;
-    }
+  if (navigator.connection && 'effectiveType' in navigator.connection) {
+    return navigator.connection.effectiveType === '4g';
+  } else {
+    /**
+     * No way to tell if network is fast or slow.
+     * Default to fast to allow caching.
+     *
+     * Firefox does not support effectiveType API.
+     */
+    return true;
+  }
 };
