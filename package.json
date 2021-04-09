@@ -23,7 +23,8 @@
     "validate-queries": "yarn run download-schema && graphql validate-magento-pwa-queries --project pwa-studio-sample-project",
     "watch": "webpack-dev-server --progress --color --env.mode development",
     "storybook": "start-storybook -p 9001 -c src/.storybook",
-    "storybook:build": "build-storybook -c src/.storybook -o storybook-dist"
+    "storybook:build": "build-storybook -c src/.storybook -o storybook-dist",
+    "postinstall": "yarn husky install"
   },
   "main": "src/index.js",
   "browser": {
@@ -84,6 +85,7 @@
     "graphql-cli": "~3.0.11",
     "graphql-cli-validate-magento-pwa-queries": "~1.4.0",
     "html-webpack-plugin": "~3.2.0",
+    "husky": "^6.0.0",
     "informed": "~3.27.0",
     "jarallax": "~1.11.1",
     "load-google-maps-api": "~2.0.1",
