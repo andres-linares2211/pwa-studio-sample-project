@@ -23,7 +23,8 @@
     "validate-queries": "yarn run download-schema && graphql validate-magento-pwa-queries --project pwa-studio-sample-project",
     "watch": "webpack-dev-server --progress --color --env.mode development",
     "storybook": "start-storybook -p 9001 -c src/.storybook",
-    "storybook:build": "build-storybook -c src/.storybook -o storybook-dist"
+    "storybook:build": "build-storybook -c src/.storybook -o storybook-dist",
+    "postinstall": "yarn husky install"
   },
   "main": "src/index.js",
   "browser": {
@@ -44,12 +45,15 @@
     "@babel/plugin-transform-runtime": "~7.4.4",
     "@babel/preset-env": "~7.3.4",
     "@babel/runtime": "~7.4.2",
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
     "@magento/babel-preset-peregrine": "~1.1.0",
     "@magento/eslint-config": "~1.5.0",
     "@magento/pagebuilder": "~5.0.0",
     "@magento/peregrine": "~10.0.0",
     "@magento/upward-security-headers": "~1.0.3",
     "@magento/venia-adobe-data-layer": "~1.0.0",
+    "@magento/venia-sample-backends": "~0.0.1",
     "@magento/venia-ui": "~7.0.0",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.1",
     "@storybook/react": "~6.1.14",
@@ -81,6 +85,7 @@
     "graphql-cli": "~3.0.11",
     "graphql-cli-validate-magento-pwa-queries": "~1.4.0",
     "html-webpack-plugin": "~3.2.0",
+    "husky": "^6.0.0",
     "informed": "~3.27.0",
     "jarallax": "~1.11.1",
     "load-google-maps-api": "~2.0.1",
@@ -119,8 +124,7 @@
     "workbox-precaching": "~6.0.2",
     "workbox-routing": "~6.0.2",
     "workbox-strategies": "~6.0.2",
-    "workbox-webpack-plugin": "~6.0.2",
-    "@magento/venia-sample-backends": "~0.0.1"
+    "workbox-webpack-plugin": "~6.0.2"
   },
   "optionalDependencies": {
     "sharp": "~0.23.3"
