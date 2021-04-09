@@ -17,10 +17,7 @@ import classes from './LoginForm.css';
 const LoginForm = () => {
   const { formatMessage } = useIntl();
   const talonProps = useSignIn({
-    getCartDetailsQuery: GET_CART_DETAILS_QUERY,
-    setDefaultUsername: () => {},
-    showCreateAccount: () => {},
-    showForgotPassword: () => {}
+    getCartDetailsQuery: GET_CART_DETAILS_QUERY
   });
 
   const { errors, handleSubmit, isBusy, setFormApi } = talonProps;
