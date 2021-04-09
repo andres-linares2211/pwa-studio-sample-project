@@ -12,7 +12,7 @@ const BackButton = () => {
   return (
     <button className={defaultClasses.root} onClick={goBack}>
       <IconBack />
-      <FormattedMessage id="{'Back'}" />
+      <FormattedMessage id={'Back'} />
     </button>
   );
 };
