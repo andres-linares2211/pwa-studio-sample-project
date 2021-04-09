@@ -1,0 +1,12 @@
+.root main {
+  margin: 2.25rem 0 3rem 0;
+}
+
+@media only screen and (min-width: 769px) {
+  .root main {
+    display: grid;
+    grid-template-columns: 350px auto;
+    column-gap: 9rem;
+    margin-bottom: 30vh;
+  }
+}
