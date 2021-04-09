@@ -10,7 +10,7 @@ registerRoutes();
 registerMessageHandlers();
 
 self.addEventListener('message', e => {
-    const { type, payload } = e.data;
+  const { type, payload } = e.data;
 
-    handleMessageFromClient(type, payload, e);
+  handleMessageFromClient(type, payload, e);
 });
