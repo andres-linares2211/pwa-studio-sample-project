@@ -1,0 +1,5 @@
+:global(:root) {
+  /* font family */
+  --venia-global-fontFamily-sansSerif: Lato, 'Lucida Grande', Tahoma, Sans-Serif;
+  --venia-global-fontFamily-serif: var(--venia-global-fontFamily-sansSerif);
+}
