@@ -1,0 +1,10 @@
+{
+  "global.back": "Back",
+  "global.logIn": "Log in",
+  "global.email": "Email",
+  "global.password": "Password",
+  "global.passwordForget": "Did you forget your password?",
+  "login.newCompany.title": "New company account",
+  "login.newCompany.message": "The creation of a company account allows its members access to features like quotes, downloable catalogs and more.",
+  "login.newCompany.create": "Create new company account"
+}

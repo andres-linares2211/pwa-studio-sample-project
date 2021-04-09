@@ -1,0 +1,13 @@
+:global(:root) {
+  /* font family */
+  --venia-global-fontFamily-sansSerif: Lato, 'Lucida Grande', Tahoma, Sans-Serif;
+  --venia-global-fontFamily-serif: var(--venia-global-fontFamily-sansSerif);
+
+  /* colors */
+  --venia-brand-color-1-100: 192 13 25;
+  --venia-brand-color-1-400: 192 13 25;
+  --venia-brand-color-1-500: 192 13 25;
+  --venia-brand-color-1-600: 192 13 25;
+  --venia-brand-color-1-700: 192 13 25;
+  --venia-brand-color-1-800: 136 0 0;
+}

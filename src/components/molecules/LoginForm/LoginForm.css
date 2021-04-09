@@ -1,0 +1,8 @@
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.root button[type='submit'] {
+  margin: 1.25rem 0;
+}
